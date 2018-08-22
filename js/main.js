@@ -1,24 +1,29 @@
-var imgCarousel = document.getElementsByClassName('imgCarousel');
+var slide = document.getElementsByClassName('slide');
 
-
-
-
-for (var i = 0; i < imgCarousel.length; i++) {
-  imgCarousel[i].style.display = "none";
-
+for (var i = 0; i < slide.length; i++) {
+  slide[i].style.opacity = "0";
 }
-imgCarousel[0].style.display = "none";
+slide[0].style.opacity = "1";
 
-function autoCarousel(){
-  var id = setInterval(frame, 50);
-  function frame() {
-    for (var i = 0; i < imgCarousel.length; i++) {
-      imgCarousel[i].style.display = "block";
-      if (imgCarousel =! i) {
-        for (var j = 0; j < imgCarousel.length; j++) {
-          imgCarousel[j].style.display = "none";
-        }
-      }
-    }}
+for (var i = 0; i < slide.length; i++) {
+  slide[i].style.transition = "0.5s ease";
+}
+
+
+var numberSlide = 1;
+
+setInterval(clickAct, 5000);
+
+function clickAct() {
+
+  if (numberSlide === slide.length) {
+    numberSlide = 0;
+  } else {
+    for (var i = 0; i < slide.length; i++) {
+      slide[i].style.opacity = "0";
+    }
+    slide[numberSlide].style.opacity = "1";
+    numberSlide++;
+  }
 
 }
