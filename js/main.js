@@ -42,18 +42,21 @@ function clickAct(button) {
       }
       //Except the slide ask
       slide[numberSlide].style.opacity = "1";
+
     } else {
+
       //For make all slide in opacity 0
       for (var i = 0; i < slide.length; i++) {
         slide[i].style.opacity = "0";
       }
       //Except the slide ask
       slide[numberSlide].style.opacity = "1";
+
     }
 
   } else if (button.id === "next") {
     //If that the button with the id next
-    
+
     numberSlide = numberSlide + 1;
 
     //If the number is egal and more that the slide.length
@@ -68,20 +71,32 @@ function clickAct(button) {
       slide[numberSlide].style.opacity = "1";
 
     } else {
+
       //For make all slide in opacity 0
       for (var i = 0; i < slide.length; i++) {
         slide[i].style.opacity = "0";
       }
       //Except the slide ask
       slide[numberSlide].style.opacity = "1";
+
     }
 
   } else {
     //Else for the interval function
     //For remake numberSlide in the begining and restart the slider
     if (numberSlide >= slide.length) {
+
       numberSlide = 0;
+      //For make all slide in opacity 0
+      for (var i = 0; i < slide.length; i++) {
+        slide[i].style.opacity = "0";
+      }
+      //Except the slide ask
+      slide[numberSlide].style.opacity = "1";
+      numberSlide++;
+
     } else {
+
       //For make all slide in opacity 0
       for (var i = 0; i < slide.length; i++) {
         slide[i].style.opacity = "0";
