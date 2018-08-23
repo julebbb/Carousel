@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -23,38 +24,47 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <section>
-    <h1>Carousel</h1>
-    <div class ="container">
+  <main>
 
-      <div class="slide">
+    <section>
 
-        <img src="img/una.png">
-        <h2>Una</h2>
+      <h1>Carousel</h1>
+      <div class ="container">
+
+        <button type="button" name="button" id="return" class="buttonSlider"><i class="fas fa-chevron-left"></i></button>
+        <button type="button" name="button" id="next" class="buttonSlider"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="slide">
+
+          <img src="img/una.png">
+          <h2>Una</h2>
+
+        </div>
+        <div class="slide">
+
+          <img src="img/selby.png">
+          <h2>Selby</h2>
+
+        </div>
+        <div class="slide">
+
+          <img  src="img/kima.png">
+          <h2>Kima</h2>
+
+        </div>
+        <div class="slide">
+
+          <img  src="img/folami-sans-ombre.png">
+          <h2>Folami</h2>
+
+        </div>
 
       </div>
-      <div class="slide">
 
-        <img src="img/selby.png">
-        <h2>Selby</h2>
+    </section>
 
-      </div>
-      <div class="slide">
+  </main>
 
-        <img  src="img/kima.png">
-        <h2>Kima</h2>
-
-      </div>
-      <div class="slide">
-
-        <img  src="img/folami-sans-ombre.png">
-        <h2>Folami</h2>
-
-      </div>
-
-    </div>
-  </section>
-  <input type="submit" name="" value="Miaou" onclick="autoCarousel()">
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
