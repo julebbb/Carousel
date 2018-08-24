@@ -24,7 +24,7 @@ for (let i = 0; i < button.length; i++) {
 }
 
 //Interval between activate function
-// var auto = setInterval(function () { clickAct("nothing");}, 2000);
+var auto = setInterval(function () { clickAct("nothing");}, 5000);
 
 function clickAct(button) {
 
@@ -83,6 +83,8 @@ function clickAct(button) {
 
   } else {
     //Else for the interval function
+    numberSlide++;
+
     //For remake numberSlide in the begining and restart the slider
     if (numberSlide >= slide.length) {
 
@@ -93,7 +95,6 @@ function clickAct(button) {
       }
       //Except the slide ask
       slide[numberSlide].style.opacity = "1";
-      numberSlide++;
 
     } else {
 
@@ -103,7 +104,6 @@ function clickAct(button) {
       }
       //Except the slide ask
       slide[numberSlide].style.opacity = "1";
-      numberSlide++;
     }
   }
 }
