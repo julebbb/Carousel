@@ -109,11 +109,13 @@ h1 {
 }
 
 .container, .slide, .slide img, .slide h2 {
-  width: 300px;
+  width: 100vw;
 }
 
 .container, .slide {
-  height: 400px;
+  height: 70vh;
+  display: flex;
+  align-items: center;
 }
 
 .slide {
@@ -121,13 +123,16 @@ h1 {
   opacity: 0;
 }
 
-.slide h2 {
-  top: 250px;
+.slide div {
+  bottom: 0;
+  margin: 0;
+  padding: 35px 0;
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  color: antiquewhite;
 }
 
-.slide img, .slide h2 {
+.slide img, .slide div {
   position: absolute;
 }
 
@@ -141,11 +146,18 @@ h1 {
 
 #return, #next {
   position: absolute;
-  top: 350px;
+  top: 45vh;
   z-index: 1;
-
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 52px;
+  color: rgba(255,255,255,0.8);
 }
 
+#return:hover, #next:hover {
+  color: antiquewhite;
+}
 
 
 
